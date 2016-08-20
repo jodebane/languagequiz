@@ -1,0 +1,42 @@
+portuguesecards = open('portuguesecards.txt', 'r')
+
+###Creating The List
+listwords = []
+for i in range(0, 11):
+     newline=portuguesecards.readline()
+     newline = newline.rstrip('\n')
+     listwords.append(newline)
+###Splitting the List into Flashcards
+listlist = []
+def createfinallist():
+    for item in listwords:
+         listli = item.split(',')
+         listlist.append([listli[0], listli[1]])
+
+###first quiz - in order
+
+def firstquiz():
+    userscore = 0
+    answers=[]
+    practiceagain = []
+    for x in range(0, len(listlist)):
+        print "How do you say ",  listlist[x][0], " in Portuguese? "
+        answers.append(raw_input("type answer "))
+        print "your answer is " , answers[x]
+        if answers[x]==listlist[x][1]:
+                       print "correct"
+                       userscore = userscore+1
+        else:
+                       print "incorrect"
+                       
+    print userscore, " out of 11 is your score!"
+                       
+                       
+        
+
+
+####list of functions
+print "welcome to portuguese flashcard quiz. Please look over the phrases beforehand and practice. type in lowercase only"
+createfinallist()
+firstquiz()
+

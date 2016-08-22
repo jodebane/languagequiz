@@ -1,0 +1,16 @@
+Hello,ola
+Good Afternoon,boa tarde
+Please,por favor
+Thank you,obrigado
+Goodbye,tchau
+My name is,meu nome e
+Where,onde
+What,o que
+Why,porque
+When,quando
+Who,quem
+
+
+
+
+
